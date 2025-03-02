@@ -21,14 +21,14 @@ if __name__=="__main__":
 
     rtoyt.download_from_subreddit(today_subreddit)
 
-    # any preconditional setup for youtube_uploader module
+    # any preconditional setup for yt_uploader module
 
     # goes into shorts/ directory, and uploads all the clips there
     # 1-2 videos per Youtube Short
-    youtube_uploader.upload_short("shorts/")    
+    yt_uploader.upload_short("shorts/")    
 
     # goes into long/ directory, and directly uploads the video there (already made)
-    youtube_uploader.upload_long_form("long/")
+    yt_uploader.upload_long_form("long/")
 
     # optional logging
     logger = logging.getLogger(__name__) 
