@@ -1,6 +1,6 @@
-import rtoyt    # HYPOTHETICAL module
+import rtoyt
 import datetime
-import yt_uploader   # HYPOTHETICAL module
+import yt_uploader
 import logging
 
 WEEKLY_UPLOAD_SUBREDDITS = [
@@ -22,11 +22,10 @@ if __name__=="__main__":
     rtoyt.download_from_subreddit(today_subreddit)
 
     # any preconditional setup for yt_uploader module
+    youtube = yt_uploader.login()
 
     # goes into shorts/ directory, and uploads all the clips there
     # 1-2 videos per Youtube Short
-    youtube = yt_uploader.login()
-
     youtube.upload_short("shorts/")    
 
     # goes into long/ directory, and directly uploads the video there (already made)
@@ -44,7 +43,7 @@ if __name__=="__main__":
     logger.info("Uploading all videos")
 
     # cleans download and temp directory
-    rtoyt.cleanup_files()
+    rtoyt.cleanup_temp_files()
 
-    # procedure to clear shorts/* and long/* (TO IMPLEMENT)
+    # procedure to clear shorts/* and long/*
     rtoyt.cleanup_videos()
