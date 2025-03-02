@@ -4,3 +4,4 @@ venv/
 __pycache__/
 *.log
 *.pickle
+config.json
