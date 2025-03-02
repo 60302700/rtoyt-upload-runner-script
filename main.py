@@ -25,10 +25,12 @@ if __name__=="__main__":
 
     # goes into shorts/ directory, and uploads all the clips there
     # 1-2 videos per Youtube Short
-    yt_uploader.upload_short("shorts/")    
+    youtube = yt_uploader.login()
+
+    youtube.upload_short("shorts/")    
 
     # goes into long/ directory, and directly uploads the video there (already made)
-    yt_uploader.upload_long_form("long/")
+    youtube.upload_long_form("long/")
 
     # optional logging
     logger = logging.getLogger(__name__) 
@@ -45,4 +47,4 @@ if __name__=="__main__":
     rtoyt.cleanup_files()
 
     # procedure to clear shorts/* and long/* (TO IMPLEMENT)
-    cleanup_videos()
+    rtoyt.cleanup_videos()
