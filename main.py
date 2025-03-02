@@ -1,6 +1,6 @@
 import rtoyt    # HYPOTHETICAL module
 import datetime
-import youtube_uploader   # HYPOTHETICAL module
+import yt_uploader   # HYPOTHETICAL module
 import logging
 
 WEEKLY_UPLOAD_SUBREDDITS = [
