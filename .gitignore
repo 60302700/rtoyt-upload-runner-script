@@ -1,0 +1,5 @@
+rtoyt/
+yt_uploader/
+venv/
+__pycache__/
+*.log
